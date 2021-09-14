@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap");
+/** Theme **/
+/** Dimensions **/
+/** Font Sizes **/
+/** mixins **/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .mobile {
+  width: 18rem;
+  height: 30rem;
+  border: 3px solid #50507f;
+  border-radius: 1.4rem;
+  padding: 0.8rem;
+  box-shadow: 40px 50px 40px 0 rgba(0, 0, 0, 0.1);
+}
+.container .mobile .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.7rem;
+  box-shadow: 5px 5px 9px 3px rgba(0, 0, 0, 0.1), -5px 0 9px 3px rgba(0, 0, 0, 0.05);
+  background-color: #f7f7f7;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.container .mobile .content .cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 0.7rem;
+  padding: 0.8rem;
+  overflow: hidden;
+}
+.container .mobile .content .cards .title {
+  font-size: 12px;
+  margin: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+.container .mobile .content .cards .card-wrapper {
+  position: absolute;
+  width: calc(100% - (2 * 0.8rem));
+  height: calc(100% - 35px - (2 * .8rem));
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.container .mobile .content .cards .card-wrapper .card {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 10px;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  box-shadow: 3px 3px 6px 0 rgba(10, 0, 10, 0.3);
+}
+.container .mobile .content .cards .card-wrapper .card:nth-child(2) {
+  top: 130px;
+}
+.container .mobile .content .cards .card-wrapper .card:nth-child(3) {
+  top: 260px;
+}
+.container .mobile .content .cards .card-wrapper .card:nth-child(4) {
+  top: 390px;
+}
+.container .mobile .content .cards .card-wrapper .card:nth-child(5) {
+  top: 520px;
+}
+.container .mobile .content .cards .card-wrapper .card .logo {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container .mobile .content .cards .card-wrapper .card .logo .circle {
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  border-radius: 50%;
+}
+.container .mobile .content .cards .card-wrapper .card .logo .circle.yellow {
+  background-color: #f19a1a;
+}
+.container .mobile .content .cards .card-wrapper .card .logo .circle.red {
+  background-color: #f7030c;
+}
+.container .mobile .content .cards .card-wrapper .card .logo .circle:last-child {
+  left: 10px;
+}
+.container .mobile .content .cards .card-wrapper .card .details {
+  width: 100%;
+  padding-top: 20px;
+  letter-spacing: 1px;
+}
+.container .mobile .content .cards .card-wrapper .card .details .number {
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 3s linear infinite;
+}
+.container .mobile .content .cards .card-wrapper .card .details .bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5px;
+}
+.container .mobile .content .cards .card-wrapper .card .details .bottom .name,
+.container .mobile .content .cards .card-wrapper .card .details .bottom .expiry {
+  color: #f7f7f7;
+  font-size: 9px;
+}
+.container .mobile .content .cards .card-wrapper .card .details .bottom .expiry {
+  margin-left: 10px;
+}
+.container .mobile .content .cards .card-wrapper .card.violet {
+  background: radial-gradient(at top left, #e15f81, #644fb1);
+}
+.container .mobile .content .cards .card-wrapper .card.blue {
+  background: radial-gradient(at top left, #4a50a0, #2e3154);
+}
+.container .mobile .content .cards .card-wrapper .card.black {
+  background: radial-gradient(at top left, #5c5c5c, #000);
+}
+.container .mobile .content .cards .card-wrapper .card:hover {
+  cursor: pointer;
+}
+.container .mobile .content .cards .card-wrapper.active {
+  top: 0;
+  height: 100%;
+}
+.container .mobile .content .cards .card-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.container .mobile .content .transactions {
+  position: absolute;
+  top: 100%;
+  width: calc(100% - (2 * 0.8rem));
+  height: calc(100% - 152px);
+  overflow-y: scroll;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  opacity: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.container .mobile .content .transactions .transaction {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .mobile .content .transactions .transaction .image-wrapper {
+  width: 15%;
+}
+.container .mobile .content .transactions .transaction .image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+.container .mobile .content .transactions .transaction .vendor-details {
+  width: 55%;
+}
+.container .mobile .content .transactions .transaction .vendor-details .title {
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+.container .mobile .content .transactions .transaction .vendor-details .description {
+  color: #5c5c5c;
+  font-size: 9px;
+}
+.container .mobile .content .transactions .transaction .transaction-details {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.container .mobile .content .transactions .transaction .transaction-details .price {
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+.container .mobile .content .transactions .transaction .transaction-details .date {
+  color: #5c5c5c;
+  font-size: 7px;
+}
+.container .mobile .content .transactions .transaction:not(:last-child) {
+  border-bottom: 1px solid #ededed;
+}
+.container .mobile .content .transactions::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
